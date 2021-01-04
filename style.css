@@ -49,7 +49,6 @@ input, button {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
 }
-
 .main-div button:hover, .loggedin-div button:hover {
   background: #fff;
   color: #16aaee;
