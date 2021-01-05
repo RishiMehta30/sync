@@ -2,6 +2,10 @@
 <head>
   <title>Sync</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,7 +34,6 @@
 
     <button onclick="signup()">Signup</button>
     <p></p>
-    <p></p>
     <p>Already have an account? <a href="index.html">Sign In.</a></p>
   </div1>
 
@@ -58,6 +61,8 @@
     firebase.initializeApp(firebaseConfig);
   </script>
   <script src="index.js"></script>
-
+  <script src="secure.js"></script>
+  <script src="index.js"></script>
+  <script src="google.js"></script>
 </body>
 </html>

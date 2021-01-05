@@ -56,3 +56,15 @@ function login(){
 function logout(){
   firebase.auth().signOut();
 }
+
+function reset() {
+  console.log("Function is executing")
+  var auth = firebase.auth();
+  var emailAddress = "rishi30.mehta@gmail.com";
+  
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    // Email sent.
+  }).catch(function(error) {
+    // An error happened.
+  });
+};
