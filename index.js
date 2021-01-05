@@ -60,11 +60,11 @@ function logout(){
 function reset() {
   console.log("Function is executing")
   var auth = firebase.auth();
-  var emailAddress = "rishi30.mehta@gmail.com";
+  var emailAddress = document.getElementById("email_field").value;
   
   auth.sendPasswordResetEmail(emailAddress).then(function() {
-    // Email sent.
+    alert("Email Sent")
   }).catch(function(error) {
-    // An error happened.
+    alert("Email not sent, it's not in our datatbase")
   });
 };
