@@ -27,7 +27,14 @@ function signup() {
   const userEmail = document.getElementById("email_field").value;
   const userPass = document.getElementById("password_field").value;
 
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass)
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+  var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
 };
 
 function login(){
