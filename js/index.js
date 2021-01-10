@@ -27,7 +27,15 @@ function signup() {
   const userEmail = document.getElementById("email_field").value;
   const userPass = document.getElementById("password_field").value;
 
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass)
+  .then((user) => {
+    const db = firebase.database();
+    const usersRef = db.ref('/users');
+    usersRef.update({
+      [user.uid]: [0]
+    });
+  })
+  .catch(function(error) {
   var errorCode = error.code;
     var errorMessage = error.message;
 
@@ -35,7 +43,7 @@ function signup() {
 
     // ...
   });
-};
+}
 function googleauth(){
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)
