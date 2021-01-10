@@ -7,37 +7,17 @@
   <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blue-gradient.css" />
 </head>
 <body>
   <div1 id="login_div" class="main-div">
-    <h1><center>Sync Login</center></h1>
-    <style>
-      body{
-        text-align:center;
-        background: #1A2980;  /* fallback for old browsers */
-background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      }
-      h1{
-        color: #207DA7
-      }
-      div1 {
-        background-color: white;
-        width: 1000px;
-        border-radius: 7%;
-        padding: 5px;
-        border: 15px solid rgb(255, 255, 255)
-        
-      }
-    </style>
+    <h1>Sync Login</h1>
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
     
 
     <button onclick="login()">Login To Account</button>
-    <p></p>
     <button onclick="googleauth()">Sign In With Google</button>
-    <p></p>
     <p>Don't have an account? <a href="create.html">Sign Up.</a></p>
     <p>Forgot Password? <a href="forgotpassword.html">Reset It.</a></p>
   </div1>
@@ -51,7 +31,7 @@ background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, F
 
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="secure.js"></script>
+  <script src="ref.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
